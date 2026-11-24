@@ -1,0 +1,29 @@
+#include "../src/version.h"
+
+// 1 = RT_ICON group / 24 = RT_MANIFEST
+1 ICON     "app.ico"
+1 24       "app.manifest"
+
+1 VERSIONINFO
+FILEVERSION     AUTOKEY_VER_MAJOR, AUTOKEY_VER_MINOR, AUTOKEY_VER_PATCH, 0
+PRODUCTVERSION  AUTOKEY_VER_MAJOR, AUTOKEY_VER_MINOR, AUTOKEY_VER_PATCH, 0
+FILEOS          0x00040004L   // VOS_NT_WINDOWS32
+FILETYPE        0x00000001L   // VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904B0"
+        {
+            VALUE "ProductName",      "AutoKey"
+            VALUE "FileDescription",  "AutoKey - Auto key presser"
+            VALUE "FileVersion",      AUTOKEY_VERSION_STR
+            VALUE "ProductVersion",   AUTOKEY_VERSION_STR
+            VALUE "OriginalFilename", "AutoKey.exe"
+            VALUE "LegalCopyright",   "MIT License"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0409, 0x04B0
+    }
+}
